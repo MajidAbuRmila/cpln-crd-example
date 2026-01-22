@@ -1,0 +1,11 @@
+apiVersion: cpln.io/v1
+kind: gvc
+metadata:
+  name: hello-world
+  namespace: default
+org: epoch
+description: hello-world
+spec:
+  staticPlacement:
+    locationLinks:
+      - //location/aws-eu-central-1

@@ -1,0 +1,29 @@
+apiVersion: cpln.io/v1
+kind: workload
+metadata:
+  name: hello-world
+  namespace: default
+org: epoch
+gvc: hello-world
+description: hello-world
+spec:
+  type: serverless
+  containers:
+    - name: hello-world
+      image: nginx:latest
+      cpu: 50m
+      memory: 128Mi
+      ports:
+        - number: 80
+          protocol: http
+  defaultOptions:
+    autoscaling:
+      minScale: 1
+      maxScale: 3
+      metric: concurrency
+      target: 100
+    capacityAI: true
+  firewallConfig:
+    external:
+      inboundAllowCIDR:
+        - 0.0.0.0/0
