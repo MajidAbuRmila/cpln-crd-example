@@ -43,7 +43,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: default
   source:
-    repoURL: https://github.com/controlplane-com/cpln-crd-example.git
+    repoURL: https://github.com/MajidAbuRmila/cpln-crd-example.git
     path: .
     targetRevision: main
   syncPolicy:
