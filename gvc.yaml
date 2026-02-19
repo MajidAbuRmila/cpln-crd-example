@@ -2,7 +2,7 @@ apiVersion: cpln.io/v1
 kind: gvc
 metadata:
   name: hello-world
-  namespace: default
+  namespace: my-cat
 org: epoch
 description: hello-world
 spec:
